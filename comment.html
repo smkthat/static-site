@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontend | Оставить комментарий</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <meta name="description" content="Оставьте свой комментарий о фронтенд-разработке. Мы ценим ваше мнение и обратную связь.">
+
+  <meta property="og:title" content="Frontend | Оставить комментарий">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/comment">
+  <meta property="og:image" content="https://example.com/assets/comment.jpg">
+  <meta property="og:image:alt" content="Форма обратной связи">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <meta name="author" content="Mikhail Vlasenko">
+  <meta name="keywords" content="фронтенд, комментарии, обратная связь, веб-разработка, HTML, CSS, JavaScript">
+  <meta name="robots" content="index, follow">
+  <meta property="og:description" content="Оставьте свой комментарий о фронтенд-разработке. Мы ценим ваше мнение и обратную связь.">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Frontend | Оставить комментарий">
+  <meta name="twitter:description" content="Оставьте свой комментарий о фронтенд-разработке. Мы ценим ваше мнение и обратную связь.">
+  <meta name="twitter:image" content="https://example.com/assets/comment.jpg">
+</head>
+
+<body>
+<div>
+  <header>
+    <a href="index.html">
+      <div class="brand">
+        <div class="logo">
+          <img src="icon.svg" alt="Logo"/>
+          Frontend
+        </div>
+        <span>разработка</span>
+      </div>
+    </a>
+
+    <nav class="navigation">
+      <ul>
+        <li>
+          <a class="nlink" href="index.html#introduction">ℹ️ Введение</a>
+        </li>
+        <li>
+          <a class="nlink" href="index.html#languages">👨🏽‍💻 Языки</a>
+        </li>
+        <li>
+          <a class="nlink" href="index.html#instruments">🛠️ Инструменты</a>
+        </li>
+        <li>
+          <a class="nlink" href="index.html#posts">📚 Статьи</a>
+        </li>
+        <li>
+          <a class="nlink" href="story.html">📕 История</a>
+        </li>
+        <li>
+          <a class="nlink" href="#">💬 Оставить комментарий</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>
+      Оставить
+      <br>комментарий
+    </h1>
+
+    <section>
+      <h2>
+        💬 Обратная связь 👉🏽
+        <br><span class="subtitle">для связи со мной заполните форму</span>
+      </h2>
+
+      <form>
+        <div class="form-fields">
+          <div>
+            <label>
+              Ваше имя
+              <input type="text" id="firstname" maxlength="30" required>
+            </label>
+            <label>
+              Ваша фамилия
+              <input type="text" id="lastname" maxlength="30">
+            </label>
+          </div>
+          <div>
+            <label>
+              Электронная почта
+              <input type="email" id="email" maxlength="256">
+            </label>
+            <label>
+              Дата рождения
+              <input type="date" id="birthdate">
+            </label>
+            <label>
+              Лет в сфере Frontend
+              <input type="number" id="itYears">
+            </label>
+          </div>
+          <label>
+            Комментарий
+            <textarea rows="5" id="comment" required></textarea>
+          </label>
+        </div>
+        <button class="btn-submit" type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a class="nlink" href="https://vk.com/smkthat" target="_blank">
+        <img
+          src="https://cdn.simpleicons.org/vk/0077ff"
+          alt="Вконтакте"/>
+        <span>Вконтакте</span>
+      </a>
+      <a class="nlink" href="https://t.me/smkthat" target="_blank">
+        <img
+          src="https://cdn.simpleicons.org/telegram/26a5e4"
+          alt="Телеграм"/>
+        <span>Telegram</span>
+      </a>
+      <a class="nlink" href="https://github.com/smkthat" target="_blank">
+        <img
+          src="https://cdn.simpleicons.org/github/ffffff"
+          alt="GitHub"/>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>

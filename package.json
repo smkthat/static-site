@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Введение в фронтенд-разработку: основные концепции и технологии.",
+  "author": {
+    "email": "ya@smkthat.ru",
+    "name": "Mikhail Vlasenko",
+    "url": "https://github.com/smkthat"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint-css": "stylelint \"**/*.css\"",
+    "fix-css": "stylelint \"**/*.css\" --fix",
+    "lint-html": "htmlhint index.html story.html comment.html"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "packageManager": "pnpm@9.0.3"
+}
