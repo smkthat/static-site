@@ -9,12 +9,21 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint-css": "stylelint \"**/*.css\"",
-    "fix-css": "stylelint \"**/*.css\" --fix",
-    "lint-html": "htmlhint index.html story.html comment.html"
+    "lint-css": "stylelint \"assets/css/*.css\"",
+    "fix-css": "stylelint \"assets/css/*.css\" --fix",
+    "lint-html": "htmlhint index.html story.html comment.html js.html",
+    "lint-js": "eslint \"assets/js/**/*.js\"",
+    "fix-js": "eslint \"assets/js/**/*.js\" --fix",
+    "lint-all": "pnpm lint-css && pnpm lint-html && pnpm lint-js",
+    "fix-all": "pnpm fix-css && pnpm fix-js",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "eslint": "9.x",
+    "globals": "^15.8.0",
     "htmlhint": "^1.1.4",
+    "husky": "^9.0.11",
     "stylelint": "^16.6.1",
     "stylelint-config-standard": "^36.0.1"
   },
