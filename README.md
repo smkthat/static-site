@@ -1,29 +1,35 @@
 # Frontend Development
 
+Preview https://smkthat.github.io/static-site/
+
 ## Task
-![img.png](docs/img.png)
-![img_1.png](docs/img_1.png)
-![img_2.png](docs/img_2.png)
+
+![img_3.png](docs/img_3.png)
 
 ## How-to lint project
+
 Install pnpm
+
 ```bash
 npm install pnpm
 ```
 
 Install dependencies
+
 ```bash
 pnpm i
 ```
 
 Run lint
+
 ```bash
-pnpm lint-css && pnpm lint-html
+pnpm lint-all
 ```
 
-Fix css
+Fix all
+
 ```bash
-pnpm fix-css
+pnpm fix-all
 ```
 
-
+Other scripts provided in `package.json`

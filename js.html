@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontend | Примеры JavaScript</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta name="description"
+        content="На этой странице вы можете ознакомиться с примерами JavaScript.">
+
+  <meta property="og:title" content="Frontend | Примеры JavaScript">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/comment">
+  <meta property="og:image" content="https://example.com/assets/comment.jpg">
+  <meta property="og:image:alt" content="Форма обратной связи">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <meta name="author" content="Mikhail Vlasenko">
+  <meta name="keywords"
+        content="фронтенд, комментарии, обратная связь, веб-разработка, HTML, CSS, JavaScript">
+  <meta name="robots" content="index, follow">
+  <meta property="og:description"
+        content="Оставьте свой комментарий о фронтенд-разработке. Мы ценим ваше мнение и обратную связь.">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Frontend | Оставить комментарий">
+  <meta name="twitter:description"
+        content="Оставьте свой комментарий о фронтенд-разработке. Мы ценим ваше мнение и обратную связь.">
+  <meta name="twitter:image" content="https://example.com/assets/comment.jpg">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+
+<body>
+<div>
+  <header>
+    <a href="index.html">
+      <div class="brand">
+        <div class="logo">
+          <img src="icon.svg" alt="Logo"/>
+          Frontend
+        </div>
+        <span>разработка</span>
+      </div>
+    </a>
+
+    <div class="menu">
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a class="nlink" href="js.html#greet">💬 Greet</a>
+          </li>
+          <li>
+            <a class="nlink" href="js.html#celsius">🌡️ Celsius</a>
+          </li>
+          <li>
+            <a class="nlink" href="js.html#fall-time">🍃 Fall time</a>
+          </li>
+          <li>
+            <a class="nlink" href="js.html#average">📊 Average</a>
+          </li>
+          <li>
+            <a class="nlink" href="js.html#concat">🔗 Concat</a>
+          </li>
+          <li>
+            <a class="nlink" href="index.html">
+              ℹ️ О Frontend
+              <span class="plus">+</span>
+              <span class="minus">-</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="nlink" href="index.html#introduction">ℹ️ Введение</a>
+              </li>
+              <li>
+                <a class="nlink" href="index.html#languages">👨🏽‍💻 Языки</a>
+              </li>
+              <li>
+                <a class="nlink" href="index.html#instruments">🛠️ Инструменты</a>
+              </li>
+              <li>
+                <a class="nlink" href="index.html#posts">📚 Статьи</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="nlink" href="story.html">
+              📕 История
+              <span class="plus">+</span>
+              <span class="minus">-</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="nlink" href="story.html#who-is">👽 Кто это?</a>
+              </li>
+              <li>
+                <a class="nlink" href="story.html#where-is">🏢 Где нужен?</a>
+              </li>
+              <li>
+                <a class="nlink" href="story.html#pro">💼 Требования</a>
+              </li>
+              <li>
+                <a class="nlink" href="story.html#how-to">🎓 Где учиться?</a>
+              </li>
+              <li>
+                <a class="nlink" href="story.html#learns">📚 Лучшие книги</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="nlink" href="comment.html">💬 Оставить комментарий</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>
+      Примеры
+      <br>JavaScript
+    </h1>
+
+    <section id="greet">
+      <h2 class="sticky-top">
+        💬 Greet 👉🏽
+        <br><span class="subtitle">выводит приветствие</span>
+      </h2>
+
+      <form onsubmit="showName(event)">
+        <div class="form-fields">
+          <div>
+            <label>
+              Ваше имя
+              <input placeholder="Вася" type="text" id="myName" maxlength="30" required>
+            </label>
+            <button class="btn-submit" type="submit">▶️ Выполнить</button>
+          </div>
+        </div>
+        <div>
+          <details>
+            <summary>Показать код</summary>
+            <pre><code class="language-js">
+export default function greet(name) {
+  /**
+   * A function that displays an alert with a greeting message.
+   *
+   * @param {string} name - The name to greet.
+   * @return {void} No return value.
+   */
+
+  alert(`Hello, ${name}!`);
+}
+            </code></pre>
+          </details>
+        </div>
+      </form>
+    </section>
+
+    <section id="celsius">
+      <h2 class="sticky-top">
+        🌡️ Celsius 👉🏽
+        <br><span class="subtitle">переводит градусы в фаренгейты</span>
+      </h2>
+
+      <form onsubmit="showConvertedTemperature(event)">
+        <div class="form-fields">
+          <div>
+            <label>
+              Температура в градусах
+              <input placeholder="0" type="number" id="celsiusNum" required>
+            </label>
+            <button class="btn-submit" type="submit">▶️ Выполнить</button>
+          </div>
+        </div>
+        <div>
+          <details>
+            <summary>Показать код</summary>
+            <pre><code class="language-js">
+export default function celsiusToFahrenheit(celsius) {
+  /**
+   * Convert Celsius temperature to Fahrenheit temperature.
+   *
+   * @param {number} celsius - The temperature in Celsius to convert.
+   * @return {number} The equivalent temperature in Fahrenheit.
+   */
+
+  try {
+    return Number(celsius) * 9 / 5 + 32;
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+            </code></pre>
+          </details>
+        </div>
+      </form>
+    </section>
+
+    <section id="fall-time">
+      <h2 class="sticky-top">
+        🍃 Fall time 👉🏽
+        <br><span class="subtitle">вычисляет расстояние падения</span>
+      </h2>
+
+      <form onsubmit="showCalculatedFall(event)">
+        <div class="form-fields">
+          <div>
+            <label>
+              Время падения в секундах
+              <input placeholder="0" type="number" id="fallTimeSec" min="0" required>
+            </label>
+            <button class="btn-submit" type="submit">▶️ Выполнить</button>
+          </div>
+        </div>
+        <div>
+          <details>
+            <summary>Показать код</summary>
+            <pre><code class="language-js">
+const FREE_FALL = 9.8;
+
+export default function calculateFallDistance(fallTimeSec) {
+  /**
+   * Calculate the fall distance based on the fall time in seconds.
+   *
+   * @param {number} fallTime - the time taken for the fall
+   * @return {number} as a result.
+   */
+
+  try {
+    return 0.5 * FREE_FALL * (Number(fallTimeSec) ^ 2)
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+            </code></pre>
+          </details>
+        </div>
+      </form>
+    </section>
+
+    <section id="average">
+      <h2 class="sticky-top">
+        📊 Average 👉🏽
+        <br><span class="subtitle">вычисляет среднее значение 3х чисел</span>
+      </h2>
+
+      <form onsubmit="showAverage(event)">
+        <div class="form-fields">
+          <div>
+            <label>
+              Первое число
+              <input placeholder="0" type="number" id="num1" min="0" required>
+            </label>
+            <label>
+              Второе число
+              <input placeholder="0" type="number" id="num2" min="0" required>
+            </label>
+            <label>
+              Третье число
+              <input placeholder="0" type="number" id="num3" min="0" required>
+            </label>
+            <button class="btn-submit" type="submit">▶️ Выполнить</button>
+          </div>
+        </div>
+        <div>
+          <details>
+            <summary>Показать код</summary>
+            <pre><code class="language-js">
+export default function calculateAverage(num1, num2, num3) {
+  /**
+   * A function to calculate the average of three numbers.
+   *
+   * @param {number} num1 - The first number.
+   * @param {number} num2 - The second number.
+   * @param {number} num3 - The third number.
+   * @return {number} as a result.
+   */
+
+  try {
+    return (Number(num1) + Number(num2) + Number(num3)) / 3;
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+            </code></pre>
+          </details>
+        </div>
+      </form>
+    </section>
+
+    <section id="concat">
+      <h2 class="sticky-top">
+        🔗 Concat 👉🏽
+        <br><span class="subtitle">объединяет слова в строку</span>
+      </h2>
+
+      <form onsubmit="showConcatStrings(event)">
+        <div class="form-fields">
+          <div>
+            <label>
+              Первое
+              <input placeholder="Слово" type="text" id="word1" maxlength="30" required>
+            </label>
+            <label>
+              Второе
+              <input placeholder="Слово" type="text" id="word2" maxlength="30" required>
+            </label>
+            <button class="btn-submit" type="submit">▶️ Выполнить</button>
+          </div>
+        </div>
+        <div>
+          <details>
+            <summary>Показать код</summary>
+            <pre><code class="language-js">
+export default function concatStrings(word1, word2) {
+  /**
+   * A function to concatenate two input strings with specific formatting.
+   *
+   * @param {string} word1 - The first word to be concatenated.
+   * @param {string} word2 - The second word to be concatenated.
+   * @return {string} The concatenated string with special formatting.
+   */
+
+  try {
+    return `Первое слово - «${word1}» , второе слово - «${word2}»`
+  } catch (e) {
+    console.log(e)
+  }
+}
+            </code></pre>
+          </details>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a class="nlink" href="https://vk.com/smkthat" target="_blank">
+        <img
+          src="https://cdn.simpleicons.org/vk/0077ff"
+          alt="Вконтакте"/>
+        <span>Вконтакте</span>
+      </a>
+      <a class="nlink" href="https://t.me/smkthat" target="_blank">
+        <img
+          src="https://cdn.simpleicons.org/telegram/26a5e4"
+          alt="Телеграм"/>
+        <span>Telegram</span>
+      </a>
+      <a class="nlink" href="https://github.com/smkthat" target="_blank">
+        <img
+          src="https://cdn.simpleicons.org/github/ffffff"
+          alt="GitHub"/>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </footer>
+
+</div>
+
+<script type="module" lang="javascript" src="assets/js/script.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -65,7 +65,7 @@ ul li, ol li {
   padding: 8px 0;
 }
 
-li span {
+li > span {
   margin-right: 8px;
 }
 
@@ -86,7 +86,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   z-index: 1;
   background-color: #111;
   position: sticky;
@@ -112,14 +112,63 @@ header * {
 
 /* Navigation */
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.submenu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 8px !important;
+  border-radius: 8px;
+  border: 2px solid #111;
+  margin: 0;
+  list-style: none;
+  gap: 0 !important;
+  backdrop-filter: blur(2px);
+}
+
+.submenu a {
+  text-wrap: nowrap;
+}
+
+.navigation li:hover .submenu {
+  display: flex !important;
+}
+
+.navigation li .minus {
+  display: none;
+}
+
+.navigation li:hover .plus {
+  display: none;
+}
+
+.navigation li:hover .minus {
+  display: block;
+}
+
 .navigation ul {
   display: flex;
-  justify-content: end;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 16px;
+}
+
+.navigation li {
+  padding: 0;
+  position: relative;
+}
+
+.submenu li {
+  /* width: 200px; */
 }
 
 .social {
@@ -166,7 +215,7 @@ section img {
   color: #e08524;
 }
 
-header .navigation, footer .social {
+footer .social {
   padding: 16px;
 }
 
@@ -278,6 +327,10 @@ tr:hover td:not(.td-title) {
   justify-content: space-between;
 }
 
+.sticky-top {
+  position: sticky;
+  top: 120px;
+}
 
 /* Posts */
 
@@ -326,11 +379,15 @@ tr:hover td:not(.td-title) {
 
 pre {
   background-color: rgb(250 235 215 / 5%);
-  padding: 16px;
   white-space: pre-wrap;
   word-wrap: break-word;
   border-radius: 4px;
   border: 1px solid rgb(211 211 211 / 1%);
+}
+
+.hljs {
+  background-color: transparent !important;
+  color: gray !important;
 }
 
 
@@ -344,15 +401,32 @@ input, textarea {
   color: white;
 }
 
+input[type="number"] {
+  width: 30px;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 textarea {
   resize: vertical;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .form-fields div {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: end;
   gap: 16px;
 }
 
@@ -364,17 +438,27 @@ textarea {
 }
 
 .btn-submit {
-  margin-top: 32px;
-  padding: 12px 24px;
+  padding: 7px 24px;
   background-color: white;
   color: black;
   cursor: pointer;
   border-radius: 16px;
-  box-shadow: 2px 2px 0 1px black;
+  border-style: inset;
+  min-width: 140px;
 }
 
 .btn-submit:hover {
   background-color: #e08524;
   transition: 0.3s ease-in-out;
-  transform: scale(1.1);
+  transform: scale(1.03);
+}
+
+summary {
+  cursor: pointer;
+  padding: 8px;
+}
+
+summary:hover {
+  color: #e08524;
+  transition: 0.3s ease-in-out;
 }
