@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Frontend | Оставить комментарий</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <meta name="description" content="Оставьте свой комментарий о фронтенд-разработке. Мы ценим ваше мнение и обратную связь.">
 
   <meta property="og:title" content="Frontend | Оставить комментарий">
@@ -42,28 +42,81 @@
       </div>
     </a>
 
-    <nav class="navigation">
-      <ul>
-        <li>
-          <a class="nlink" href="index.html#introduction">ℹ️ Введение</a>
-        </li>
-        <li>
-          <a class="nlink" href="index.html#languages">👨🏽‍💻 Языки</a>
-        </li>
-        <li>
-          <a class="nlink" href="index.html#instruments">🛠️ Инструменты</a>
-        </li>
-        <li>
-          <a class="nlink" href="index.html#posts">📚 Статьи</a>
-        </li>
-        <li>
-          <a class="nlink" href="story.html">📕 История</a>
-        </li>
-        <li>
-          <a class="nlink" href="#">💬 Оставить комментарий</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="menu">
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a class="nlink" href="index.html">
+              ℹ️ О Frontend
+              <span class="plus">+</span>
+              <span class="minus">-</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="nlink" href="index.html#introduction">ℹ️ Введение</a>
+              </li>
+              <li>
+                <a class="nlink" href="index.html#languages">👨🏽‍💻 Языки</a>
+              </li>
+              <li>
+                <a class="nlink" href="index.html#instruments">🛠️ Инструменты</a>
+              </li>
+              <li>
+                <a class="nlink" href="index.html#posts">📚 Статьи</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="nlink" href="story.html">
+              📕 История
+              <span class="plus">+</span>
+              <span class="minus">-</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="nlink" href="story.html#who-is">👽 Кто это?</a>
+              </li>
+              <li>
+                <a class="nlink" href="story.html#where-is">🏢 Где нужен?</a>
+              </li>
+              <li>
+                <a class="nlink" href="story.html#pro">💼 Требования</a>
+              </li>
+              <li>
+                <a class="nlink" href="story.html#how-to">🎓 Где учиться?</a>
+              </li>
+              <li>
+                <a class="nlink" href="story.html#learns">📚 Лучшие книги</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="nlink" href="js.html">
+              🚀 Примеры JS
+              <span class="plus">+</span>
+              <span class="minus">-</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="nlink" href="js.html#greet">💬 Greet</a>
+              </li>
+              <li>
+                <a class="nlink" href="js.html#celsius">🌡️ Celsius</a>
+              </li>
+              <li>
+                <a class="nlink" href="js.html#fall-time">🍃 Fall time</a>
+              </li>
+              <li>
+                <a class="nlink" href="js.html#average">📊 Average</a>
+              </li>
+              <li>
+                <a class="nlink" href="js.html#concat">🔗 Concat</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -73,7 +126,7 @@
     </h1>
 
     <section>
-      <h2>
+      <h2 class="sticky-top">
         💬 Обратная связь 👉🏽
         <br><span class="subtitle">для связи со мной заполните форму</span>
       </h2>
@@ -83,17 +136,17 @@
           <div>
             <label>
               Ваше имя
-              <input type="text" id="firstname" maxlength="30" required>
+              <input placeholder="Вася" type="text" id="firstname" maxlength="30" required>
             </label>
             <label>
               Ваша фамилия
-              <input type="text" id="lastname" maxlength="30">
+              <input placeholder="Иванов" type="text" id="lastname" maxlength="30">
             </label>
           </div>
           <div>
             <label>
               Электронная почта
-              <input type="email" id="email" maxlength="256">
+              <input placeholder="wtf@xyz.com" type="email" id="email" maxlength="256">
             </label>
             <label>
               Дата рождения
@@ -101,7 +154,7 @@
             </label>
             <label>
               Лет в сфере Frontend
-              <input type="number" id="itYears">
+              <input type="number" min="0" max="100" id="itYears">
             </label>
           </div>
           <label>
