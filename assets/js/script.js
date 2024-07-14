@@ -4,6 +4,8 @@ import calculateFallDistance from "./modules/gravity.js";
 import calculateAverage from "./modules/average.js";
 import concatStrings from "./modules/strings.js";
 
+import createOrUpdateResultCodeBlock from "./utils.js";
+
 
 function showName(event) {
   /**
@@ -16,7 +18,8 @@ function showName(event) {
   event.preventDefault();
   const nameElement = document.getElementById("myName");
   if (nameElement != null) {
-    greet(nameElement.value);
+    const result = greet(nameElement.value);
+    createOrUpdateResultCodeBlock("greet", result)
     nameElement.value = "";
   }
 }
@@ -24,7 +27,7 @@ function showName(event) {
 function showConvertedTemperature(event) {
   /**
    * A function that handles the conversion of Celsius temperature to Fahrenheit
-   * and displays the result in an alert box.
+   * and displays the result in a code block.
    *
    * @param {Event} event - The event object triggering the function.
    * @return {void} This function does not return a value.
@@ -34,7 +37,7 @@ function showConvertedTemperature(event) {
   const celsiusElement = document.getElementById("celsiusNum");
   if (celsiusElement != null) {
     const result = celsiusToFahrenheit(celsiusElement.value);
-    alert(`${result} °F`);
+    createOrUpdateResultCodeBlock("celsius", `${result} °F`)
     celsiusElement.value = null;
   }
 }
@@ -51,7 +54,7 @@ function showCalculatedFall(event) {
   const fallTimeSecElement = document.getElementById("fallTimeSec");
   if (fallTimeSecElement != null) {
     const result = calculateFallDistance(fallTimeSecElement.value);
-    alert(`${result} м`);
+    createOrUpdateResultCodeBlock("fall-time", `${result} м`)
     fallTimeSecElement.value = null;
   }
 }
@@ -59,7 +62,7 @@ function showCalculatedFall(event) {
 function showAverage(event) {
   /**
    * A function to calculate the average of three numbers,
-   * display the result in an alert, and reset the input fields.
+   * display the result in a code block, and reset the input fields.
    *
    * @param {Event} event - The event object triggering the function.
    * @return {void} No explicit return value.
@@ -74,7 +77,10 @@ function showAverage(event) {
     const num2 = num2Element.value;
     const num3 = num3Element.value;
     const result = calculateAverage(num1, num2, num3);
-    alert(`Среднее значение чисел ${num1}, ${num2} и ${num3} равно ${result}`);
+    createOrUpdateResultCodeBlock(
+      "average",
+      `Среднее значение чисел ${num1}, ${num2} и ${num3} равно ${result}`
+    )
     num1Element.value = 0;
     num2Element.value = 0;
     num3Element.value = 0;
@@ -83,7 +89,8 @@ function showAverage(event) {
 
 function showConcatStrings(event) {
   /**
-   * A function to handle the concatenation of two input strings, display the result in an alert, and clear the input fields.
+   * A function to handle the concatenation of two input strings,
+   * display the result in a code block, and clear the input fields.
    *
    * @param {Event} event - The event object triggering the function.
    * @return {void} No explicit return value.
@@ -96,7 +103,7 @@ function showConcatStrings(event) {
     const word1 = word1Element.value;
     const word2 = word2Element.value;
     const result = concatStrings(word1, word2);
-    alert(result);
+    createOrUpdateResultCodeBlock("concat", result);
     word1Element.value = "";
     word2Element.value = "";
   }
