@@ -1,4 +1,4 @@
-@import url("static-site/styles/blocks/theme-switch.css");
+@import url("blocks/theme-switch.css");
 
 :root {
   --light-primary-color: #333;

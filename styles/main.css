@@ -1,8 +1,8 @@
 /* Main styles */
-@import url("static-site/styles/base.css");
-@import url("static-site/styles/blocks/header.css");
-@import url("static-site/styles/blocks/brand.css");
-@import url("static-site/styles/blocks/books.css");
+@import url("base.css");
+@import url("blocks/header.css");
+@import url("blocks/brand.css");
+@import url("blocks/books.css");
 
 /* Block main */
 .main {
