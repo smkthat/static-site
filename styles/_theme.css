@@ -1,0 +1,18 @@
+@import url("./blocks/theme-switch.css");
+
+:root {
+  --light-primary-color: #333;
+  --light-secondary-color: #fff;
+  --light-background-color: #f4f4f4;
+  --dark-primary-color: #fff;
+  --dark-secondary-color: #333;
+  --dark-background-color: #222;
+  --theme-icon: url("/assets/icons/light--off.svg");
+}
+
+[data-theme="dark"] {
+  --primary-color: var(--dark-primary-color);
+  --secondary-color: var(--dark-secondary-color);
+  --background-color: var(--dark-background-color);
+  --theme-icon: url("/assets/icons/light--on.svg");
+}

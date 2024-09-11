@@ -1,0 +1,13 @@
+/* Variables */
+
+:root {
+  --accent-color: #f7e017;
+  --primary-color: #333;
+  --secondary-color: #fff;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --background-color: #f4f4f4;
+  --shadow: 0 5px 10px rgb(0 0 0 / 20%);
+}
