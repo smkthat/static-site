@@ -1,0 +1,49 @@
+/* Utils */
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.sticky--top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.sticky--bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed--top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed--bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.gap {
+  gap: 4rem;
+}
+
+.gap--section {
+  gap: 2em;
+}
+
+.gap--block {
+  gap: 1em;
+}

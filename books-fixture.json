@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Грокаем алгоритмы",
+    "author": "Адитья Бхаргава",
+    "summary": "Иллюстрированное пособие для программистов и любопытствующих",
+    "year": "2023",
+    "genre": "программирование",
+    "cover": "https://cs1.htmlacademy.ru/blog/js/books-javascript/25024db024329972e0fc573aab9f0583.webp",
+    "status": "не прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  },
+  {
+    "title": "Чистый код",
+    "author": "Роберт Мартин",
+    "summary": "Создание, анализ и рефакторинг",
+    "year": "2022",
+    "genre": "программирование",
+    "cover": "https://cs1.htmlacademy.ru/blog/js/books-javascript/8ed6efbe6e2ac541326d094670a3b929.webp",
+    "status": "не прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  },
+  {
+    "title": "Серия «Вы не знаете JavaScript»",
+    "author": "Кайл Симпсон",
+    "summary": "",
+    "year": "2021",
+    "genre": "программирование",
+    "cover": "https://cs1.htmlacademy.ru/blog/js/books-javascript/7c46872f00b0b3839d4f9f9a90ed2a7e.webp",
+    "status": "не прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  },
+  {
+    "title": "JavaScript for Web Designers",
+    "author": "Mat Marquis",
+    "summary": "",
+    "year": "2024",
+    "genre": "программирование",
+    "cover": "https://cs1.htmlacademy.ru/blog/js/books-javascript/5225ec57fd9eb7887564c0ee19ba2b00.jpeg",
+    "status": "не прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  },
+  {
+    "title": "JavaScript для детей",
+    "author": "Marijn Haverbeke",
+    "summary": "Самоучитель по программированию",
+    "year": "2020",
+    "genre": "программирование",
+    "cover": "https://cs1.htmlacademy.ru/blog/js/books-javascript/5fc40012523e20a12624b7d09eb6f3aa.png",
+    "status": "не прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  },
+  {
+    "title": "Выразительный JavaScript",
+    "author": "Марейн Хавербеке",
+    "summary": "Современное веб-программирование",
+    "year": "2022",
+    "genre": "программирование",
+    "cover": "https://cs1.htmlacademy.ru/blog/js/books-javascript/759a9a773e9f82610bbea2e8fccc3e6e.webp",
+    "status": "не прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  },
+  {
+    "title": "Выразительный JavaScript",
+    "author": "Дэвид Флэнаган",
+    "summary": "",
+    "year": "2024",
+    "genre": "программирование",
+    "cover": "https://cs1.htmlacademy.ru/blog/js/books-javascript/e0e0dd2fe76ca074b031d61e042c5319.png",
+    "status": "не прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  },
+  {
+    "title": "KGBT+ (КГБТ+)",
+    "author": "Виктор Пелевин",
+    "summary": "",
+    "year": "2023",
+    "genre": "философия",
+    "cover": "https://ndc.book24.ru/resize/820x1180/pim/products/images/10/ac/018f61a1-8135-7b3f-a5c4-69971e1610ac.jpg",
+    "status": "прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  },
+  {
+    "title": "Generation \"П\"",
+    "author": "Виктор Пелевин",
+    "summary": "",
+    "year": "2023",
+    "genre": "философия",
+    "cover": "https://ndc.book24.ru/resize/820x1180/pim/products/images/2a/0c/018f5cdc-a187-7681-8efb-8ab5e0832a0c.jpg",
+    "status": "прочитана",
+    "modifiedDate": "12.09.2024, 02:02"
+  }
+]

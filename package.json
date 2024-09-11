@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Введение в фронтенд-разработку: основные концепции и технологии.",
   "author": {
     "email": "ya@smkthat.ru",
@@ -9,11 +9,11 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint-css": "stylelint 'assets/css/*.css'",
-    "fix-css": "stylelint 'assets/css/*.css' --fix",
+    "lint-css": "stylelint 'styles/*.css'",
+    "fix-css": "stylelint 'styles/*.css' --fix",
     "lint-html": "htmlhint index.html",
-    "lint-js": "eslint 'assets/js/**/*.js'",
-    "fix-js": "eslint 'assets/js/**/*.js' --fix",
+    "lint-js": "eslint 'scripts/**/*.js'",
+    "fix-js": "eslint 'scripts/**/*.js' --fix",
     "lint-all": "pnpm lint-css && pnpm lint-html && pnpm lint-js",
     "fix-all": "pnpm fix-css && pnpm fix-js",
     "prepare": "husky"

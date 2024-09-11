@@ -1,10 +1,13 @@
 # JS: база+
+<img src="logo.svg" width="140"  alt="logo"/>
+
 Зачетная работа по модулю №5
 
 Превью https://smkthat.github.io/static-site/
+
 ___
 
-![icon.png](icon.svg)
+
 
 ## Задача
 

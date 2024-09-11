@@ -1,41 +1,191 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JS: база+ | Главная</title>
+  <title>JS: база+</title>
   <meta name="description" content="JS: база+">
 
   <meta property="og:title" content="JS: база+">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://example.com">
-  <meta property="og:image"
-        content="https://example.com/icon.png">
+  <meta property="og:image" content="https://example.com/icon.png">
   <meta property="og:image:alt" content="JS: база+">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/logo.png">
 
   <meta name="author" content="Mikhail Vlasenko">
   <meta name="keywords"
         content="js, javascript, фронтенд, веб, библиотека, книг">
   <meta name="robots" content="index, follow">
-  <meta property="og:description"
-        content="Книги по JavaScript">
+  <meta property="og:description" content="Книги по JavaScript">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Frontend | Введение">
-  <meta name="twitter:description"
-        content="Книги по JavaScript">
-  <meta name="twitter:image"
-        content="https://example.com/icon.png">
+  <meta name="twitter:title" content="JS: база+">
+  <meta name="twitter:description" content="Книги по JavaScript">
+  <meta name="twitter:image" content="https://example.com/logo.png">
 
-  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-<h1>JS: база+</h1>
+
+<header class="header">
+  <div class="brand">
+    <h1 class="brand__title">JS: база+</h1>
+  </div>
+  <label class="theme-switch">
+    <input type="checkbox" id="theme-toggle" class="theme-switch__input">
+  </label>
+</header>
+
+<main class="main">
+
+  <section id="book-list" class="book-list gap">
+
+    <div id="book-filter"
+         class="book-list__header sticky sticky--top gap--block">
+      <label class="form-field">
+        <select id="filterGenre" class="form-field__select">
+          <option value="" selected>Все жанры</option>
+          <option value="художественный">художественный</option>
+          <option value="научный">научный</option>
+          <option value="фэнтези">фэнтези</option>
+          <option value="детектив">детектив</option>
+          <option value="роман">роман</option>
+          <option value="научная-фантастика">научная-фантастика</option>
+          <option value="биография">биография</option>
+          <option value="история">история</option>
+          <option value="саморазвитие">саморазвитие</option>
+          <option value="программирование">программирование</option>
+          <option value="учебный">учебный</option>
+          <option value="технический">технический</option>
+          <option value="философия">философия</option>
+          <option value="психология">психология</option>
+          <option value="путешествия">путешествия</option>
+          <option value="здоровье">здоровье</option>
+          <option value="искусство">искусство</option>
+          <option value="поэзия">поэзия</option>
+          <option value="детский">детский</option>
+          <option value="комиксы">комиксы</option>
+        </select>
+      </label>
+      <label class="form-field">
+        <select id="filterStatus" class="form-field__select">
+          <option value="" selected>Все статусы</option>
+          <option value="не прочитана">не прочитана</option>
+          <option value="прочитана">прочитана</option>
+        </select>
+      </label>
+    </div>
+
+    <ul id="books" class="book-list__books gap--section"></ul>
+
+    <div class="book-list__footer sticky sticky--bottom gap--block">
+      <p>Книг (с учетом фильтров): <span id="book-count">0</span></p>
+      <button
+        id="clear-books"
+        class="book-button book-button--delete-all"
+      >
+        Очистить библиотеку
+      </button>
+    </div>
+
+  </section>
+
+  <dialog id="book-dialog" class="book-dialog">
+
+    <form id="book-form" class="book-form gap--block">
+      <span class="book-dialog__close">&times;</span>
+
+      <label class="form-field">
+        <input
+          type="text"
+          id="title"
+          class="form-field__input"
+          placeholder="Название"
+          required
+        >
+      </label>
+      <label class="form-field">
+        <input
+          type="text"
+          id="author"
+          class="form-field__input"
+          placeholder="Автор"
+          required
+        >
+      </label>
+      <label class="form-field">
+        <textarea
+          id="summary"
+          class="form-field__textarea"
+          placeholder="Описание"
+          rows="5"
+        ></textarea>
+      </label>
+      <label class="form-field">
+        <input
+          type="number"
+          id="year"
+          maxlength="4"
+          class="form-field__input"
+          placeholder="Год издания"
+          required
+        >
+      </label>
+      <label class="form-field">
+        <select id="genre" class="form-field__select">
+          <option value="художественный">художественный</option>
+          <option value="научный">научный</option>
+          <option value="фэнтези">фэнтези</option>
+          <option value="детектив">детектив</option>
+          <option value="роман">роман</option>
+          <option value="научная-фантастика">научная-фантастика</option>
+          <option value="биография">биография</option>
+          <option value="история">история</option>
+          <option value="саморазвитие">саморазвитие</option>
+          <option value="программирование">программирование</option>
+          <option value="учебный">учебный</option>
+          <option value="технический">технический</option>
+          <option value="философия">философия</option>
+          <option value="психология">психология</option>
+          <option value="путешествия">путешествия</option>
+          <option value="здоровье">здоровье</option>
+          <option value="искусство">искусство</option>
+          <option value="поэзия">поэзия</option>
+          <option value="детский">детский</option>
+          <option value="комиксы">комиксы</option>
+        </select>
+      </label>
+      <label class="form-field">
+        <input
+          type="url"
+          id="cover"
+          class="form-field__input"
+          placeholder="Ссылка на обложку"
+        >
+      </label>
+      <label class="form-field">
+        <select id="status" class="form-field__select">
+          <option value="не прочитана">не прочитана</option>
+          <option value="прочитана">прочитана</option>
+        </select>
+      </label>
+
+      <button type="submit" class="book-button book-button--success">
+        Подтвердить
+      </button>
+    </form>
+
+  </dialog>
+
+</main>
+
+<script lang="javascript" type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>
