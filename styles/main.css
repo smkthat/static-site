@@ -1,0 +1,35 @@
+/* Main styles */
+@import url("./base.css");
+@import url("./blocks/header.css");
+@import url("./blocks/brand.css");
+@import url("./blocks/books.css");
+
+/* Block main */
+.main {
+  padding: 2rem;
+}
+
+/* Form */
+.form-field {
+  width: 100%;
+  display: flex;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  border: 2px solid gray;
+}
+
+.form-field__input,
+.form-field__textarea,
+.form-field__select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  color: var(--primary-color);
+}
+
+.form-field__input:focus,
+.form-field__textarea:focus,
+.form-field__select:focus {
+  outline: none;
+}

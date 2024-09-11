@@ -1,0 +1,16 @@
+/* Block header */
+.header {;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 99;
+}
+
+.header__button {
+  background: none;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

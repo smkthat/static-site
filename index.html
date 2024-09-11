@@ -1,680 +1,191 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Frontend | Введение</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <meta name="description"
-        content="Введение в фронтенд-разработку: основные концепции и технологии.">
+  <title>JS: база+</title>
+  <meta name="description" content="JS: база+">
 
-  <meta property="og:title" content="Frontend | Введение">
+  <meta property="og:title" content="JS: база+">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://example.com">
-  <meta property="og:image"
-        content="https://example.com/assets/frontend-intro.jpg">
-  <meta property="og:image:alt" content="Введение в фронтенд-разработку">
+  <meta property="og:image" content="https://example.com/icon.png">
+  <meta property="og:image:alt" content="JS: база+">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/logo.png">
 
   <meta name="author" content="Mikhail Vlasenko">
   <meta name="keywords"
-        content="фронтенд, введение, веб-разработка, HTML, CSS, JavaScript">
+        content="js, javascript, фронтенд, веб, библиотека, книг">
   <meta name="robots" content="index, follow">
-  <meta property="og:description"
-        content="Узнайте об основных концепциях и технологиях фронтенд-разработки.">
+  <meta property="og:description" content="Книги по JavaScript">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Frontend | Введение">
-  <meta name="twitter:description"
-        content="Введение в фронтенд-разработку: основные концепции и технологии.">
-  <meta name="twitter:image"
-        content="https://example.com/assets/frontend-intro.jpg">
+  <meta name="twitter:title" content="JS: база+">
+  <meta name="twitter:description" content="Книги по JavaScript">
+  <meta name="twitter:image" content="https://example.com/logo.png">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-<div>
-  <header>
-    <a href="#">
-      <div class="brand">
-        <div class="logo">
-          <img src="icon.svg" alt="Logo"/>
-          Frontend
-        </div>
-        <span>разработка</span>
-      </div>
-    </a>
 
-    <div class="menu">
-      <nav class="navigation">
-        <ul>
-          <li>
-            <a class="nlink" href="#introduction">ℹ️ Введение</a>
-          </li>
-          <li>
-            <a class="nlink" href="#languages">👨🏽‍💻 Языки</a>
-          </li>
-          <li>
-            <a class="nlink" href="#instruments">🛠️ Инструменты</a>
-          </li>
-          <li>
-            <a class="nlink" href="#posts">📚 Статьи</a>
-          </li>
-          <li>
-            <a class="nlink" href="story.html">
-              📕 История
-              <span class="plus">+</span>
-              <span class="minus">-</span>
-            </a>
-            <ul class="submenu">
-              <li>
-                <a class="nlink" href="story.html#who-is">👽 Кто это?</a>
-              </li>
-              <li>
-                <a class="nlink" href="story.html#where-is">🏢 Где нужен?</a>
-              </li>
-              <li>
-                <a class="nlink" href="story.html#pro">💼 Требования</a>
-              </li>
-              <li>
-                <a class="nlink" href="story.html#how-to">🎓 Где учиться?</a>
-              </li>
-              <li>
-                <a class="nlink" href="story.html#learns">📚 Лучшие книги</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="nlink" href="js.html">
-              🚀 Примеры JS
-              <span class="plus">+</span>
-              <span class="minus">-</span>
-            </a>
-            <ul class="submenu">
-              <li>
-                <a class="nlink" href="js.html#greet">💬 Greet</a>
-              </li>
-              <li>
-                <a class="nlink" href="js.html#celsius">🌡️ Celsius</a>
-              </li>
-              <li>
-                <a class="nlink" href="js.html#fall-time">🍃 Fall time</a>
-              </li>
-              <li>
-                <a class="nlink" href="js.html#average">📊 Average</a>
-              </li>
-              <li>
-                <a class="nlink" href="js.html#concat">🔗 Concat</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="nlink" href="comment.html">💬 Оставить комментарий</a>
-          </li>
-        </ul>
-      </nav>
+<header class="header">
+  <div class="brand">
+    <h1 class="brand__title">JS: база+</h1>
+  </div>
+  <label class="theme-switch">
+    <input type="checkbox" id="theme-toggle" class="theme-switch__input">
+  </label>
+</header>
+
+<main class="main">
+
+  <section id="book-list" class="book-list gap">
+
+    <div id="book-filter"
+         class="book-list__header sticky sticky--top gap--block">
+      <label class="form-field">
+        <select id="filterGenre" class="form-field__select">
+          <option value="" selected>Все жанры</option>
+          <option value="художественный">художественный</option>
+          <option value="научный">научный</option>
+          <option value="фэнтези">фэнтези</option>
+          <option value="детектив">детектив</option>
+          <option value="роман">роман</option>
+          <option value="научная-фантастика">научная-фантастика</option>
+          <option value="биография">биография</option>
+          <option value="история">история</option>
+          <option value="саморазвитие">саморазвитие</option>
+          <option value="программирование">программирование</option>
+          <option value="учебный">учебный</option>
+          <option value="технический">технический</option>
+          <option value="философия">философия</option>
+          <option value="психология">психология</option>
+          <option value="путешествия">путешествия</option>
+          <option value="здоровье">здоровье</option>
+          <option value="искусство">искусство</option>
+          <option value="поэзия">поэзия</option>
+          <option value="детский">детский</option>
+          <option value="комиксы">комиксы</option>
+        </select>
+      </label>
+      <label class="form-field">
+        <select id="filterStatus" class="form-field__select">
+          <option value="" selected>Все статусы</option>
+          <option value="не прочитана">не прочитана</option>
+          <option value="прочитана">прочитана</option>
+        </select>
+      </label>
     </div>
-  </header>
 
-  <main>
-    <h1>
-      Frontend
-      <br>разработка
-    </h1>
+    <ul id="books" class="book-list__books gap--section"></ul>
 
-    <section id="introduction">
-      <h2 class="sticky-top">
-        ℹ️ Введение 👉🏽
-        <br><span class="subtitle">в Frontend разработку</span>
-      </h2>
-      <div>
-        <span>
-          Frontend разработка отвечает за создание интерфейса пользовательской
-          части веб-сайта или веб-приложения.
-          <br>Она включает в себя работу с HTML, CSS и JavaScript.
-        </span>
-      </div>
-    </section>
-
-    <section id="languages">
-      <h2 class="sticky-top">
-        👨🏽‍💻 Языки 👉🏽
-        <br><span class="subtitle">в Frontend разработке</span>
-      </h2>
-      <div>
-        <span>Основными языками Frontend разработки являются:</span>
-        <ul>
-          <li>
-            <span>👉🏽</span>HTML (HyperText Markup Language) - используется для
-            структурирования
-            содержимого веб-страницы;
-          </li>
-          <li>
-            <span>👉🏽</span>CSS (Cascading Style Sheets) - используется для
-            стилизации
-            веб-страницы и создания ее внешнего вида;
-          </li>
-          <li>
-            <span>👉🏽</span>JavaScript - используется для добавления
-            интерактивности на
-            веб-страницу, <br>такой как анимации, обработка событий
-            и динамическое обновление содержимого.
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="instruments">
-      <h2 class="sticky-top">
-        🛠️ Инструменты 👉🏽
-        <br><span class="subtitle">в Frontend разработке</span>
-      </h2>
-      <div>
-        <ol>
-          <li>
-            <span>1.</span>Visual Studio Code - Мощный редактор кода с
-            поддержкой множества
-            языков и плагинов;
-          </li>
-          <li>
-            <span>2.</span>React - библиотека для создания пользовательских
-            интерфейсов;
-          </li>
-          <li>
-            <span>3.</span>Sass - репроцессор CSS с расширенными возможностями;
-          </li>
-          <li>
-            <span>4.</span>Webpack - Сборщик модулей для JavaScript приложений.
-          </li>
-        </ol>
-
-        <table>
-          <thead>
-          <tr>
-            <th colspan="2">Навыки</th>
-            <th>Junior</th>
-            <th>Middle</th>
-            <th>Me</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td rowspan="6" class="td-title">HTML</td>
-            <td class="text-start">Верстка основных элементов</td>
-            <td>🟢</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td class="text-start">Соблюдение семантики</td>
-            <td>🟢</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td class="text-start">Доступность сайта</td>
-            <td>базовые знания</td>
-            <td>продвинутые знания</td>
-            <td>продвинутые знания</td>
-          </tr>
-          <tr>
-            <td class="text-start">Шаблонизаторы (Pug, Twig)</td>
-            <td>❌</td>
-            <td>🟢</td>
-            <td>⭕️ Jinja2</td>
-          </tr>
-          <tr>
-            <td class="text-start">Микроразметка</td>
-            <td>❌</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td class="text-start">Вёрстка под React (JSX и CSS-in-JS)</td>
-            <td>🟢</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td rowspan="6" class="td-title">CSS</td>
-            <td class="text-start">Сетки (Flex, Grid)</td>
-            <td>🟢</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td class="text-start">Работа со шрифтами</td>
-            <td>Вариативные шрифты</td>
-            <td>Оптимизация шрифтов</td>
-            <td>Кастомизация шрифтов</td>
-          </tr>
-          <tr>
-            <td class="text-start">Препроцессоры SASS, Less, PostCSS</td>
-            <td>🟢</td>
-            <td>🟢</td>
-            <td>⭕️ PostCSS</td>
-          </tr>
-          <tr>
-            <td class="text-start">Методологии БЭМ</td>
-            <td>🟢</td>
-            <td>🟢</td>
-            <td>❌</td>
-          </tr>
-          <tr>
-            <td class="text-start">Фреймворк Bootstrap</td>
-            <td>❌</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td class="text-start">Фреймворк Tailwind CSS</td>
-            <td>❌</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td rowspan="5" class="td-title">JavaScript</td>
-            <td class="text-start">Базовый синтаксис и конструкции</td>
-            <td>❌</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td class="text-start">React</td>
-            <td>🟢</td>
-            <td>🟢</td>
-            <td>⭕️ magic Vue</td>
-          </tr>
-          <tr>
-            <td class="text-start">TypeScript</td>
-            <td>🟢</td>
-            <td>🟢</td>
-            <td>🟢</td>
-          </tr>
-          <tr>
-            <td class="text-start">State Management (Redux, Mobx)</td>
-            <td>❌</td>
-            <td>🟢</td>
-            <td>⭕️ Vuex, Pinia</td>
-          </tr>
-          <tr>
-            <td class="text-start">SSR (Next.js)</td>
-            <td>❌</td>
-            <td>🟢</td>
-            <td>⭕️ Nuxt3.js</td>
-          </tr>
-          <tr>
-            <td colspan="2" class="text-end">Итого:</td>
-            <td>опыт &lt; 1 года</td>
-            <td>опыт 1 - 3 года</td>
-            <td>🤷🏽‍</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="posts">
-      <h2 class="sticky-top">
-        📚 Статьи 👉🏽
-        <br><span class="subtitle">про Frontend разработку</span>
-      </h2>
-      <div class="posts">
-        <ul class="list-container">
-          <li class="card">
-            <article>
-              <h4>CSS Лайфхаки: Использование переменных</h4>
-              <p>Переменные в CSS позволяют значительно упростить управление
-                стилями. Они помогают избежать дублирования кода и делают его
-                более читаемым. Например, вы можете определить переменную для
-                основного цвета и использовать её в различных местах вашего CSS
-                кода.</p>
-              <pre><code class="language-css">
-:root {
-  --main-color: #3498db;
-}
-.header {
-  background-color: var(--main-color);
-}
-              </code></pre>
-              <div class="tags">
-                <span>CSS</span>
-                <span>Лайфхаки</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>JavaScript: Асинхронные функции</h4>
-              <p>Асинхронные функции позволяют выполнять операции, не блокируя
-                основной поток выполнения. Это особенно полезно при работе с
-                сетевыми запросами. Например, функция fetchData использует
-                async/await для получения данных с сервера.</p>
-              <pre><code class="language-javascript">
-async function fetchData() {
-    let response = await fetch('https://api.example.com/data');
-    let data = await response.json();
-    console.log(data);
-}
-            </code></pre>
-              <div class="tags">
-                <span>JavaScript</span>
-                <span>Асинхронность</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>Деплой сайта на GitHub Pages</h4>
-              <p>GitHub Pages позволяет легко развернуть статический сайт. Для
-                этого достаточно создать репозиторий и загрузить в него файлы
-                сайта. Вот пример команд для деплоя:</p>
-              <pre><code class="language-bash">
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/username/repo.git
-git push -u origin master
-            </code></pre>
-              <div class="tags">
-                <span>GitHub</span>
-                <span>Деплой</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>React: Использование хуков</h4>
-              <p>Хуки в React позволяют использовать состояние и другие
-                возможности React без написания классов. Один из самых
-                популярных хуков - useState. Пример использования:</p>
-              <pre><code class="language-javascript">
-import React, { useState } from 'react';
-
-function Counter() {
-    const [count, setCount] = useState(0);
-
-    return (
-        &lt;div&gt;
-            &lt;p&gt;Вы нажали {count} раз&lt;/p&gt;
-            &lt;button onClick={() => setCount(count + 1)}&gt;
-                Нажми меня
-            &lt;/button&gt;
-        &lt;/div&gt;
-    );
-}
-            </code></pre>
-              <div class="tags">
-                <span>React</span>
-                <span>Хуки</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>Vue: Основы реактивности</h4>
-              <p>Реактивность в Vue позволяет автоматически обновлять интерфейс
-                при изменении данных. Это достигается благодаря использованию
-                наблюдаемых объектов. Пример:</p>
-              <pre><code class="language-javascript">
-new Vue({
-    el: '#app',
-    data: {
-        message: 'Hello Vue!'
-    }
-});
-            </code></pre>
-              <div class="tags">
-                <span>Vue</span>
-                <span>Реактивность</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>SSR: Серверный рендеринг с Next.js</h4>
-              <p>Next.js позволяет легко реализовать серверный рендеринг для
-                React приложений. Это улучшает SEO и ускоряет загрузку страниц.
-                Пример:</p>
-              <pre><code class="language-javascript">
-import React from 'react';
-import { GetServerSideProps } from 'next';
-
-export const getServerSideProps: GetServerSideProps = async () => {
-    const res = await fetch('https://api.example.com/data');
-    const data = await res.json();
-
-    return { props: { data } };
-};
-
-const Page = ({ data }) => (
-    &lt;div&gt;
-        &lt;h1&gt;Data from server&lt;/h1&gt;
-        &lt;pre&gt;{JSON.stringify(data, null, 2)}&lt;/pre&gt;
-    &lt;/div&gt;
-);
-
-export default Page;
-            </code></pre>
-              <div class="tags">
-                <span>SSR</span>
-                <span>Next.js</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>SSG: Статическая генерация с Gatsby</h4>
-              <p>Gatsby позволяет создавать статические сайты, которые
-                генерируются на этапе сборки. Это обеспечивает высокую
-                производительность и безопасность. Пример:</p>
-              <pre><code class="language-javascript">
-import React from 'react';
-import { graphql } from 'gatsby';
-
-export const query = graphql`
-query {
-    site {
-        siteMetadata {
-            title
-        }
-    }
-}
-`;
-
-const IndexPage = ({ data }) => (
-    &lt;div&gt;
-        &lt;h1&gt;{data.site.siteMetadata.title}&lt;/h1&gt;
-    &lt;/div&gt;
-);
-
-export default IndexPage;
-            </code></pre>
-              <div class="tags">
-                <span>SSG</span>
-                <span>Gatsby</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>CSS Лайфхаки: Flexbox</h4>
-              <p>Flexbox позволяет легко выравнивать элементы на странице. Он
-                особенно полезен для создания адаптивных макетов. Пример:</p>
-              <pre><code class="language-css">
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-            </code></pre>
-              <div class="tags">
-                <span>CSS</span>
-                <span>Flexbox</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>JavaScript: Работа с промисами</h4>
-              <p>Промисы позволяют обрабатывать асинхронные операции. Они
-                предоставляют методы then и catch для обработки успешных и
-                неудачных завершений. Пример:</p>
-              <pre><code class="language-javascript">
-let promise = new Promise((resolve, reject) =&gt; {
-    setTimeout(() =&gt; resolve("done!"), 1000);
-});
-
-promise.then(
-    result =&gt; console.log(result),
-    error =&gt; console.log(error)
-);
-            </code></pre>
-              <div class="tags">
-                <span>JavaScript</span>
-                <span>Промисы</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>React: Компоненты высшего порядка</h4>
-              <p>Компоненты высшего порядка (HOC) позволяют повторно
-                использовать логику компонентов. Они принимают компонент и
-                возвращают новый компонент. Пример:</p>
-              <pre><code class="language-javascript">
-function withLogging(WrappedComponent) {
-    return function(props) {
-        console.log('Rendering', WrappedComponent.name);
-        return &lt;WrappedComponent {...props} /&gt;;
-    };
-}
-            </code></pre>
-              <div class="tags">
-                <span>React</span>
-                <span>HOC</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>Vue: Компоненты и props</h4>
-              <p>Компоненты в Vue позволяют разбивать интерфейс на независимые
-                части. Props используются для передачи данных от родительского
-                компонента к дочернему. Пример:</p>
-              <pre><code class="language-javascript">
-Vue.component('child', {
-    props: ['message'],
-    template: '&lt;p&gt;{{ message }}&lt;/p&gt;'
-});
-
-new Vue({
-    el: '#app',
-    data: {
-        parentMessage: 'Hello from parent'
-    }
-});
-            </code></pre>
-              <div class="tags">
-                <span>Vue</span>
-                <span>Компоненты</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>SSR: Преимущества и недостатки</h4>
-              <p>Серверный рендеринг (SSR) имеет свои плюсы и минусы. Он
-                улучшает SEO и скорость загрузки, но может усложнить
-                архитектуру приложения. Пример:</p>
-              <pre><code class="language-javascript">
-const express = require('express');
-const app = express();
-
-app.get('*', (req, res) =&gt; {
-    const html = renderToString(&lt;App /&gt;);
-    res.send(html);
-});
-
-app.listen(3000);
-            </code></pre>
-              <div class="tags">
-                <span>SSR</span>
-                <span>Преимущества</span>
-              </div>
-            </article>
-          </li>
-          <li class="card">
-            <article>
-              <h4>SSG: Преимущества и недостатки</h4>
-              <p>Статическая генерация (SSG) обеспечивает высокую
-                производительность и безопасность, но может быть неэффективной
-                для часто обновляемых данных. Пример:</p>
-              <pre><code class="language-javascript">
-export async function getStaticProps() {
-    const res = await fetch('https://api.example.com/data');
-    const data = await res.json();
-
-    return {
-        props: {
-            data,
-        },
-    };
-}
-
-const Page = ({ data }) =&gt; (
-    &lt;div&gt;
-        &lt;h1&gt;Data from static generation&lt;/h1&gt;
-        &lt;pre&gt;{JSON.stringify(data, null, 2)}&lt;/pre&gt;
-    &lt;/div&gt;
-);
-
-export default Page;
-              </code></pre>
-              <div class="tags">
-                <span>SSG</span>
-                <span>Преимущества</span>
-              </div>
-            </article>
-          </li>
-        </ul>
-
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="social">
-      <a class="nlink" href="https://vk.com/smkthat" target="_blank">
-        <img
-          src="https://cdn.simpleicons.org/vk/0077ff"
-          alt="Вконтакте"/>
-        <span>Вконтакте</span>
-      </a>
-      <a class="nlink" href="https://t.me/smkthat" target="_blank">
-        <img
-          src="https://cdn.simpleicons.org/telegram/26a5e4"
-          alt="Телеграм"/>
-        <span>Telegram</span>
-      </a>
-      <a class="nlink" href="https://github.com/smkthat" target="_blank">
-        <img
-          src="https://cdn.simpleicons.org/github/ffffff"
-          alt="GitHub"/>
-        <span>GitHub</span>
-      </a>
+    <div class="book-list__footer sticky sticky--bottom gap--block">
+      <p>Книг (с учетом фильтров): <span id="book-count">0</span></p>
+      <button
+        id="clear-books"
+        class="book-button book-button--delete-all"
+      >
+        Очистить библиотеку
+      </button>
     </div>
-  </footer>
-</div>
 
-<script>hljs.highlightAll();</script>
+  </section>
+
+  <dialog id="book-dialog" class="book-dialog">
+
+    <form id="book-form" class="book-form gap--block">
+      <span class="book-dialog__close">&times;</span>
+
+      <label class="form-field">
+        <input
+          type="text"
+          id="title"
+          class="form-field__input"
+          placeholder="Название"
+          required
+        >
+      </label>
+      <label class="form-field">
+        <input
+          type="text"
+          id="author"
+          class="form-field__input"
+          placeholder="Автор"
+          required
+        >
+      </label>
+      <label class="form-field">
+        <textarea
+          id="summary"
+          class="form-field__textarea"
+          placeholder="Описание"
+          rows="5"
+        ></textarea>
+      </label>
+      <label class="form-field">
+        <input
+          type="number"
+          id="year"
+          maxlength="4"
+          class="form-field__input"
+          placeholder="Год издания"
+          required
+        >
+      </label>
+      <label class="form-field">
+        <select id="genre" class="form-field__select">
+          <option value="художественный">художественный</option>
+          <option value="научный">научный</option>
+          <option value="фэнтези">фэнтези</option>
+          <option value="детектив">детектив</option>
+          <option value="роман">роман</option>
+          <option value="научная-фантастика">научная-фантастика</option>
+          <option value="биография">биография</option>
+          <option value="история">история</option>
+          <option value="саморазвитие">саморазвитие</option>
+          <option value="программирование">программирование</option>
+          <option value="учебный">учебный</option>
+          <option value="технический">технический</option>
+          <option value="философия">философия</option>
+          <option value="психология">психология</option>
+          <option value="путешествия">путешествия</option>
+          <option value="здоровье">здоровье</option>
+          <option value="искусство">искусство</option>
+          <option value="поэзия">поэзия</option>
+          <option value="детский">детский</option>
+          <option value="комиксы">комиксы</option>
+        </select>
+      </label>
+      <label class="form-field">
+        <input
+          type="url"
+          id="cover"
+          class="form-field__input"
+          placeholder="Ссылка на обложку"
+        >
+      </label>
+      <label class="form-field">
+        <select id="status" class="form-field__select">
+          <option value="не прочитана">не прочитана</option>
+          <option value="прочитана">прочитана</option>
+        </select>
+      </label>
+
+      <button type="submit" class="book-button book-button--success">
+        Подтвердить
+      </button>
+    </form>
+
+  </dialog>
+
+</main>
+
+<script lang="javascript" type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>

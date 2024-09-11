@@ -1,0 +1,16 @@
+/* Block brand */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand__logo {
+  width: 60px;
+  height: 60px;
+}
+
+.brand__title {
+  margin: 0;
+}

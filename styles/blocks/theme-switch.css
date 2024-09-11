@@ -1,0 +1,14 @@
+.theme-switch {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background-image: var(--theme-icon);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-switch__input {
+  opacity: 0;
+}
