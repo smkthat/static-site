@@ -1,4 +1,4 @@
-@import url("./blocks/theme-switch.css");
+@import url("blocks/theme-switch.css");
 
 :root {
   --light-primary-color: #333;
@@ -7,12 +7,12 @@
   --dark-primary-color: #fff;
   --dark-secondary-color: #333;
   --dark-background-color: #222;
-  --theme-icon: url("/assets/icons/light--off.svg");
+  --theme-icon: url("../../assets/icons/light--off.svg");
 }
 
 [data-theme="dark"] {
   --primary-color: var(--dark-primary-color);
   --secondary-color: var(--dark-secondary-color);
   --background-color: var(--dark-background-color);
-  --theme-icon: url("/assets/icons/light--on.svg");
+  --theme-icon: url("../../assets/icons/light--on.svg");
 }

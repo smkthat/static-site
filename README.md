@@ -1,5 +1,5 @@
 # JS: база+
-<img src="logo.svg" width="140"  alt="logo"/>
+<img src="assets/images/logo.svg" width="140"  alt="logo"/>
 
 Зачетная работа по модулю №5
 

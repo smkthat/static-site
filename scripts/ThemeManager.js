@@ -2,10 +2,10 @@
  * A class that manages the theme of the application.
  *
  * @class ThemeManager
- * @param {DataStorageService} storageService - The storage service implemented
- * from the DataStorageService interface and used to save and load theme data.
+ * @param {DataStorageInterface} storageService - The storage service implemented
+ * from the DataStorageInterface and used to save and load theme data.
  * @property {string} theme - The current theme preference ('light' or 'dark').
- * @property {DataStorageService} storageService - The storage service used
+ * @property {DataStorageInterface} storageService - The storage service used
  * to save and load theme data.
  * @method toggleTheme - Toggles the theme between light and dark.
  * @method applyTheme - Applies the current theme to the document body.
@@ -16,7 +16,7 @@ export default class ThemeManager {
    * Creates a new instance of the ThemeManager class.
    *
    * @constructor
-   * @param {DataStorageService} storageService - The storage service used
+   * @param {DataStorageInterface} storageService - The storage service used
    * to save and load theme data.
    */
   constructor(storageService) {
