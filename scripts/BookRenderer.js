@@ -1,10 +1,10 @@
 /**
  * A module for rendering books and managing their display.
  *
- * @module renderers/BookRenderer
+ * @module BookRenderer
  * @exports {Class} BookRenderer
  */
-import {Book} from "../managers/BookManager.js";
+import {Book} from "./BookManager.js";
 
 /**
  * A class for rendering books and managing their display.
