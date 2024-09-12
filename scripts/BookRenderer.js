@@ -4,7 +4,7 @@
  * @module renderers/BookRenderer
  * @exports {Class} BookRenderer
  */
-import {Book} from "../managers/BookManager.js";
+import {Book} from "scripts/BookManager.js";
 
 /**
  * A class for rendering books and managing their display.

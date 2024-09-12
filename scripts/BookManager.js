@@ -1,11 +1,4 @@
 /**
- * A module that contains the Book and BookManager classes.
- * @module managers/BookManager
- * @exports {Class} Book
- * @exports {Class} BookManager
- */
-
-/**
  * An enumeration of book statuses.
  * @readonly
  * @enum {string}

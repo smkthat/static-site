@@ -5,10 +5,10 @@
  * on user interactions.
  */
 
-import LocalStorageService from './services/LocalStorageService.js';
-import {BookManager} from './managers/BookManager.js';
-import ThemeManager from './managers/ThemeManager.js';
-import BookRenderer from "./renderers/BookRenderer.js";
+import LocalStorageService from 'scripts/LocalStorageService.js';
+import {BookManager} from 'scripts/BookManager.js';
+import ThemeManager from 'scripts/ThemeManager.js';
+import BookRenderer from "scripts/BookRenderer.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   const storageService = new LocalStorageService();

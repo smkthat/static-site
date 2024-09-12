@@ -1,4 +1,4 @@
-import DataStorageInterface from './DataStorageInterface.js';
+import DataStorageInterface from 'scripts/DataStorageInterface.js';
 
 /**
  * A class that extends the DataStorageInterface and provides methods

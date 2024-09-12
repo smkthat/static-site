@@ -1,6 +1,6 @@
-@import url("_variables.css");
-@import url("_theme.css");
-@import url("_utils.css");
+@import url("styles/variables.css");
+@import url("styles/theme.css");
+@import url("styles/utils.css");
 
 /* Base styles */
 * {
