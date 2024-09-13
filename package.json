@@ -1,0 +1,48 @@
+{
+  "name": "module8",
+  "description": "Node.js, npm и сборщики",
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "npm@8.19.2",
+  "scripts": {
+    "dev": "parcel watch *.html",
+    "build": "parcel build *.html",
+    "serve": "node src/server.js",
+    "lint-css": "stylelint 'styles/*.css'",
+    "fix-css": "stylelint 'styles/*.css' --fix",
+    "lint-html": "htmlhint index.html",
+    "lint-js": "eslint 'src/*.js'",
+    "fix-js": "eslint 'src/*.js' --fix",
+    "lint-all": "npm run lint-css && npm run lint-html && npm run lint-js",
+    "fix-all": "npm run fix-css && npm run fix-js",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smkthat/static-site.git"
+  },
+  "keywords": [
+    "nodejs",
+    "npm"
+  ],
+  "author": "Mikhail Vlasenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smkthat/static-site/issues"
+  },
+  "homepage": "https://github.com/smkthat/static-site",
+  "dependencies": {
+    "express": "^4.21.0",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "eslint": "9.x",
+    "globals": "^15.8.0",
+    "htmlhint": "^1.1.4",
+    "husky": "^9.0.11",
+    "parcel": "^2.12.0",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1"
+  }
+}
