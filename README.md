@@ -3,8 +3,6 @@
 
 Зачетная работа по модулю №8
 
-Превью https://smkthat.github.io/static-site/
-
 ___
 
 
