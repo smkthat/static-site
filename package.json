@@ -6,10 +6,10 @@
   "packageManager": "npm@8.19.2",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
+    "dev": "parcel watch index.html",
     "build": "parcel build index.html",
-    "serv": "npx http-server",
-    "lighthouse": "lighthouse http://127.0.0.1:8080 --output html --output-path ./report.html --view",
+    "serv": "npx http-server --port 8081",
+    "lighthouse": "lighthouse http://127.0.0.1:8081 --output html --output-path ./report.html --view",
     "serve": "node src/server.js",
     "lint-css": "stylelint 'styles/*.css'",
     "fix-css": "stylelint 'styles/*.css' --fix",
