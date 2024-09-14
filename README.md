@@ -1,106 +1,204 @@
-# Node.js, npm и сборщики
+# Некоторые интересные и (крайне) полезные инструменты
+
 <img src="assets/images/logo.svg" width="140"  alt="logo"/>
 
-Зачетная работа по модулю №8
+Практическая работа по модулю №9
 
 ___
 
+## Ваши задачи:
 
+Использовать инструменты для улучшения качества кода, автоматического
+форматирования, анализа производительности веб-страниц и отслеживания ошибок.
 
-## Задание 1: Введение в Node.js и npm
+## Цели:
 
+- Настроить ESLint для статического анализа кода.
+- Настроить Prettier для автоматического форматирования кода.
+- Использовать Lighthouse для анализа производительности веб-страницы.
+- Настроить и использовать Sentry для отслеживания ошибок.
 
-### Создание проекта:
+## Шаги выполнения:
 
-- Установите Node.js и npm на вашем компьютере.
-- Инициализируйте новый проект с помощью команды `npm init`.
-- Введите все необходимые данные, такие как название проекта, версия и описание.
+---
 
-### Задание 2: Работа с JSON
+### Часть 1: ESLint
 
-- Создайте файл `config.json`, содержащий следующие настройки:
+#### Установка ESLint:
+
+1. Инициализируйте новый проект npm:
+
+```bash
+npm init -y
+```
+
+2. Установите ESLint:
+
+```bash
+npm install eslint --save-dev
+```
+
+3. Инициализируйте конфигурацию ESLint:
+
+```bash
+npm init @eslint/config@latest
+```
+
+4. Следуйте инструкциям для настройки ESLint.
+
+#### Создание конфигурационного файла `.eslintrc`:
+
+После инициализации создайте файл `.eslintrc.json` и добавьте базовую
+конфигурацию:
+
 ```json
 {
- "port": 3000,
- "database": {
-  "host": "localhost",
-  "port": 5432,
-  "name": "mydatabase"
- }
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
+  }
 }
 ```
 
-### Задание 3: Инициализация проекта через npm, библиотеки и установка пакетов
+#### Проверка кода с помощью ESLint:
 
-- Установите библиотеки Express и pg для работы с веб-сервером и базой данных:
+1. Создайте файл `index.js` и добавьте в него код с намеренными ошибками стиля.
+
+2. Запустите ESLint для проверки кода:
 
 ```bash
-npm install express pg
+npx eslint src/index.js
 ```
 
-### Задание 4: Создание файла .gitignore
+---
 
-- Создайте файл `.gitignore` в корне вашего проекта и добавьте следующие строки:
+### Часть 2: Prettier
 
-```
-node_modules/
-config.json
-```
+#### Установка Prettier:
 
-### Задание 5: Использование модулей Node.js
-
-Создание и использование локального модуля:
-
-- Создайте файл `math.js` с функциями для сложения и вычитания:
-
-```javascript
-function add(a, b) {
- return a + b;
-}
-
-function subtract(a, b) {
- return a - b;
-}
-
-module.exports = {
- add,
- subtract
-};
-```
-
-Импортируйте и используйте эти функции в `server.js`.
-
-### Задание 7: Сборщики фронтенда: webpack, gulp, grunt, parcel и т.д.
-
-Использование Parcel для сборки проекта:
- 
-- Установите Parcel как дев-зависимость:
+Установите Prettier:
 
 ```bash
-npm install --save-dev parcel
+npm install --save-dev prettier
 ```
 
-- Настройте `index.html` и `src/index.js` для сборки с помощью Parcel.
+#### Создание конфигурационного файла `.prettierrc`:
 
-```html
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Parcel Project</title>
-</head>
-<body>
- <script src="./src/index.js"></script>
-</body>
-</html>
+Создайте файл `.prettierrc` с базовой конфигурацией:
+
+```json
+{
+  "singleQuote": true,
+  "semi": true
+}
 ```
+
+#### Интеграция Prettier с ESLint:
+
+1. Установите необходимые пакеты:
+
+```bash
+npm install --save-dev eslint-config-prettier eslint-plugin-prettier
+```
+
+2. Обновите ваш `.eslintrc` для использования Prettier:
+
+```json
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ]
+}
+```
+
+#### Форматирование кода с помощью Prettier:
+
+Запустите Prettier для форматирования кода:
+
+```bash
+npx prettier --write src/index.js
+```
+
+---
+
+### Часть 3: Lighthouse
+
+#### Установка Lighthouse:
+
+Установите Lighthouse глобально:
+
+```bash
+npm install -g lighthouse
+```
+
+#### Анализ производительности веб-страницы:
+
+1. Запустите локальный сервер:
+
+```bash
+npx http-server
+```
+
+2. Запустите Lighthouse для анализа локального сервера:
+
+```bash
+lighthouse http://127.0.0.1:8080 --output html --output-path ./report.html --view
+```
+
+---
+
+### Часть 4: Sentry
+
+#### Регистрация в Sentry:
+
+Зарегистрируйтесь и создайте новый проект на Sentry.
+
+#### Установка и настройка Sentry:
+
+1. Установите Sentry для вашего проекта:
+
+```bash
+npm install @sentry/browser @sentry/tracing
+```
+
+2. Настройте Sentry в вашем проекте. Добавьте следующий код JavaScript-файл:
 
 ```javascript
-// src/index.js
-console.log('Hello from Parcel!');
+import * as Sentry from '@sentry/browser';
+
+import {Integrations} from '@sentry/tracing';
+
+Sentry.init({
+  dsn: 'YOUR_SENTRY_DSN',
+  integrations: [new Integrations.BrowserTracing()],
+  tracesSampleRate: 1.0,
+});
 ```
+
+#### Отслеживание ошибок:
+
+Создайте намеренную ошибку в вашем коде, чтобы проверить, что Sentry правильно
+отслеживает ошибки.
 
 ---
 

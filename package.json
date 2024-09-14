@@ -4,9 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "packageManager": "npm@8.19.2",
+  "main": "index.js",
   "scripts": {
-    "dev": "parcel watch *.html",
-    "build": "parcel build *.html",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "serv": "npx http-server",
+    "lighthouse": "lighthouse http://127.0.0.1:8080 --output html --output-path ./report.html --view",
     "serve": "node src/server.js",
     "lint-css": "stylelint 'styles/*.css'",
     "fix-css": "stylelint 'styles/*.css' --fix",
@@ -33,16 +36,22 @@
   "homepage": "https://github.com/smkthat/static-site",
   "dependencies": {
     "express": "^4.21.0",
+    "logrocket": "^9.0.0",
     "pg": "^8.12.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.6.0",
     "eslint": "9.x",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1",
     "globals": "^15.8.0",
     "htmlhint": "^1.1.4",
     "husky": "^9.0.11",
-    "parcel": "^2.12.0",
-    "stylelint": "^16.6.1",
-    "stylelint-config-standard": "^36.0.1"
+    "parcel": "^2.12.0"
+  },
+  "engines": {
+    "node": ">=18.16"
   }
 }
