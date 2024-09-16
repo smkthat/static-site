@@ -5,6 +5,7 @@
  * on user interactions.
  */
 
+import autoAnimate from 'https://cdn.jsdelivr.net/npm/@formkit/auto-animate'
 import LocalStorageService from './LocalStorageService.js';
 import {BookManager} from './BookManager.js';
 import ThemeManager from './ThemeManager.js';
@@ -21,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookForm = document.getElementById('book-form');
   const bookList = document.getElementById('books');
   const bookCount = document.getElementById('book-count');
+
+  autoAnimate(bookList);
 
   const bookRenderer = new BookRenderer(
     bookManager, bookList, bookDialog, bookForm, bookCount

@@ -7,6 +7,7 @@
   --dark-primary-color: #fff;
   --dark-secondary-color: #333;
   --dark-background-color: #222;
+  --dark-background-color-20: #22222266;
   --theme-icon: url("../../assets/icons/light--off.svg");
 }
 
@@ -14,5 +15,6 @@
   --primary-color: var(--dark-primary-color);
   --secondary-color: var(--dark-secondary-color);
   --background-color: var(--dark-background-color);
+  --background-color-20: var(--dark-background-color-20);
   --theme-icon: url("../../assets/icons/light--on.svg");
 }
