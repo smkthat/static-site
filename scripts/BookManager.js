@@ -1,3 +1,5 @@
+import {getCurrentFormattedDateTime} from "./utils.js";
+
 /**
  * An enumeration of book statuses.
  * @readonly
@@ -78,16 +80,7 @@ class Book {
         details.cover,
         details.genre,
         details.status ? details.status : BookStatus.UNREAD,
-        new Date().toLocaleDateString(
-          "ru-RU",
-          {
-            year: 'numeric',
-            month: 'numeric',
-            day: 'numeric',
-            hour: "2-digit",
-            minute: "2-digit"
-          }
-        )
+        getCurrentFormattedDateTime()
       );
     }
   }
@@ -130,7 +123,7 @@ class Book {
    */
   update(details) {
     Object.assign(this, details);
-    this.modifiedDate = new Date();
+    this.modifiedDate = getCurrentFormattedDateTime();
     return this
   }
 
