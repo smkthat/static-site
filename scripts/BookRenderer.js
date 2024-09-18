@@ -63,6 +63,7 @@ export default class BookRenderer {
     books.forEach(book => {
       const {title, author, year, summary, cover, genre, modifiedDate} = book;
       const bookCard = document.createElement('li');
+      bookCard.className = `book shadow ${book.isRead() ? 'book--read' : ''}`;
       const formattedTitle = book.title.replaceAll(". ", ".<br>");
       const bookStyle = cover ?
         `style="background-image: url('${cover}');"` : "";
@@ -74,19 +75,18 @@ export default class BookRenderer {
       `;
 
       bookCard.innerHTML = `
-          <div class="book shadow ${book.isRead() ? 'book--read' : ''}">
-            <div class="book__side book__side--front" ${bookStyle}>
+          <div class="book__side book__side--front" ${bookStyle}>
               <div class="book__content">${!cover ? bookContent : ''}</div>
-            </div>
-            <div class="book__side book__side--back">
+          </div>
+          <div class="book__side book__side--back">
               <div class="book__content">
-                ${bookContent}
-                <div class="book__content-buttons gap--block">
-                  <button class="book-button book-button--edit">Изменить</button>
-                  <button class="book-button book-button--delete">Удалить</button>
-                </div>
+                  ${bookContent}
+                  <div class="book__content-buttons gap--block">
+                      <button class="book-button book-button--edit">Изменить</button>
+                      <button class="book-button book-button--delete">Удалить</button>
+                  </div>
                 <span>Обновлено: ${modifiedDate}</span>
-            </div>
+              </div>
           </div>
       `;
       bookCard.querySelector('.book-button--edit').addEventListener(
