@@ -99,7 +99,7 @@
   height: 100%;
 }
 
-.book:hover {
+.book-item:hover > .book {
   transform: rotateY(180deg);
 }
 
@@ -131,7 +131,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transform: translatez(70px);
+  transform: translateZ(70px);
   line-height: 1.5em;
 }
 
